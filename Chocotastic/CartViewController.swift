@@ -82,11 +82,11 @@ private extension CartViewController {
 
 private extension CartViewController {
   func configureCartCell() {
-    ShoppingCart
+    ShoppingCart.sharedCart.chocolates
       .bind(to: tableView
         .rx
         .items(cellIdentifier: CartCell.Identifier, cellType: CartCell.self)) { row, chocolate, cell in
-          cell.configureCartCell(cart: <#T##ShoppingCart#>)
+          cell.configureCartCell(chocolate: chocolate)
       }
       .disposed(by: disposeBag)
   }

@@ -37,7 +37,7 @@ class CartCell: UITableViewCell {
     
   }
   
-  func configureCartCell(cart: ShoppingCart) {
-    cartItem.text = cart.itemCountString
+  func configureCartCell(chocolate: Chocolate) {
+    cartItem.text = chocolate.countryFlagEmoji
   }
 }
